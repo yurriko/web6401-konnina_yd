@@ -1,0 +1,133 @@
+/* Селектор псевдокласса :root – цветовые переменные */
+:root {
+  --night: #10263F;
+  --spruce: #0F3D2E;
+  --red: #C8102E;
+  --gold: #E8B84A;
+  --snow: #F8FAFC;
+  --ink: #1B2433;
+  --rule: #D5DCE6;
+  --garland-h: 54px;
+}
+
+
+body {
+  margin: 0;
+  background: var(--night);
+  color: var(--ink);
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2 { font-family: Georgia, "Times New Roman", serif; line-height: 1.2; }
+h1 { font-size: 2.1rem; margin: 0 0 1rem; color: var(--red); }
+h2 { font-size: 1.4rem; margin: 2.2rem 0 0.8rem; padding-bottom: 0.3rem; border-bottom: 3px solid var(--gold); }
+p { max-width: 70ch; }
+
+/* Мигающая гирлянда */
+.garland {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--garland-h);
+  margin: 0; padding: 0 1%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  background: linear-gradient(var(--night) 50%, transparent);
+}
+.garland::before {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: 10px;
+  height: 3px;
+  background: #050B14;
+}
+.garland li {
+  width: 14px; height: 22px;
+  margin-top: 12px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  background: var(--c);
+  box-shadow: 0 0 12px 4px var(--c);
+  animation: twinkle 1.6s ease-in-out infinite;
+}
+.garland li:nth-child(4n+1) { --c: #FF3B47; }
+.garland li:nth-child(4n+2) { --c: #FFD34D; }
+.garland li:nth-child(4n+3) { --c: #3DDC84; }
+.garland li:nth-child(4n)   { --c: #4DA3FF; }
+.garland li:nth-child(odd)  { animation-delay: 0.8s; }
+.garland li:nth-child(3n)   { animation-delay: 0.4s; }
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; box-shadow: 0 0 12px 4px var(--c); }
+  50%      { opacity: 0.3; box-shadow: 0 0 3px 1px var(--c); }
+}
+
+.img-main {
+  width: 70%;
+}
+
+/* Селектор класса */
+.layout { display: grid; grid-template-columns: 250px 1fr; min-height: 100vh; padding-top: var(--garland-h); }
+
+.sidebar {
+  background: var(--spruce);
+  color: var(--snow);
+  padding: 1.2rem 1.2rem;
+  position: sticky;
+  top: var(--garland-h);
+  height: calc(100vh - var(--garland-h));
+}
+.sidebar img { width: 56px; height: 56px; display: block; margin-bottom: 0.8rem; }
+.site-title { font-family: Georgia, serif; font-size: 1.15rem; margin: 0 0 1.5rem; }
+
+/* Селектор потомка: ссылки внутри меню */
+.sidebar nav a {
+  display: block;
+  color: var(--snow);
+  text-decoration: none;
+  padding: 0.5rem 0.7rem;
+  border-left: 4px solid transparent;
+}
+.sidebar nav a:hover { background: rgba(255, 255, 255, 0.1); }
+
+/* Селектор идентификатора */
+#current { border-left-color: var(--gold); background: rgba(255, 255, 255, 0.14); font-weight: 600; }
+
+.content { background: var(--snow); padding: 2.5rem 3rem; }
+.lead { font-size: 1.15rem; border-left: 4px solid var(--red); padding-left: 1rem; }
+
+.note { background: #FFF6DE; border: 1px solid var(--gold); border-left: 6px solid var(--gold); padding: 0.8rem 1rem; }
+
+figure { margin: 1.5rem 0; }
+figure img { max-width: 100%; height: auto; border: 1px solid var(--rule); background: var(--night); }
+figcaption { font-size: 0.9rem; color: #4A566B; }
+
+dt { font-weight: 700; margin-top: 0.8rem; color: var(--spruce); }
+dd { margin-left: 1.2rem; }
+
+/* Селектор атрибута */
+a[href^="http"] { color: var(--red); }
+a:hover { color: var(--spruce); }
+
+/* Таблица */
+table { border-collapse: collapse; width: 100%; background: #fff; margin-bottom: 1rem; }
+caption { text-align: left; font-weight: 700; padding: 0.5rem 0; }
+th, td { border: 1px solid var(--rule); padding: 0.55rem 0.8rem; }
+thead th { background: var(--spruce); color: var(--snow); }
+tbody tr:nth-child(even) { background: #F1F6F3; }
+tbody tr:hover { background: #FFE9EC; }
+
+/* Выравнивание в таблице по левому краю, по центру, по правому краю */
+.left { text-align: left; }
+.center { text-align: center; }
+.right { text-align: right; }
+
+footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); font-size: 0.9rem; }
+
+@media (max-width: 800px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { position: static; height: auto; }
+  .content { padding: 1.5rem 1.2rem; }
+  .garland li:nth-child(n+13) { display: none; }
+}
