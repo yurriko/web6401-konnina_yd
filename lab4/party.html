@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заявка на праздник – Новый год</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <ul class="garland" aria-hidden="true"><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li></ul>
+  <div class="page">
+    <aside class="sidebar">
+      <img class="sidebar__logo" src="images/logo.svg" alt="Логотип сайта: ёлка со звездой">
+      <p class="sidebar__title">Закуски и развлечения на Новый год</p>
+      <nav class="nav">
+        <a class="nav__link" href="index.html">Главная</a>
+        <a class="nav__link" href="snacks.html">Закуски</a>
+        <a class="nav__link" href="olivier.html">Оливье</a>
+        <a class="nav__link" href="activities.html">Чем заняться</a>
+        <a class="nav__link nav__link--current" href="party.html" aria-current="page">Заявка на праздник</a>
+        <a class="nav__link" href="about.html">Об авторе</a>
+      </nav>
+    </aside>
+    <main class="content">
+
+      <h1 class="content__title">Заявка на новогоднюю вечеринку</h1>
+      <p class="content__text">Заполните форму – при отправке создаётся объект класса <code>PartyRequest</code>, и его данные выводятся в консоль браузера (F12 → Console)</p>
+
+      <form class="form" id="party-form" action="#" method="post" novalidate>
+        <div class="form__row">
+          <label class="form__field">
+            <span class="form__label">Имя</span>
+            <input class="form__input" type="text" name="name" placeholder="Юлия" required minlength="2">
+          </label>
+          <label class="form__field">
+            <span class="form__label">E-mail</span>
+            <input class="form__input" type="email" name="email" placeholder="name@mail.ru" required>
+          </label>
+        </div>
+
+        <div class="form__row">
+          <label class="form__field">
+            <span class="form__label">Дата</span>
+            <input class="form__input" type="date" name="date" value="2026-12-31" required>
+          </label>
+          <label class="form__field">
+            <span class="form__label">Количество гостей</span>
+            <input class="form__input" type="number" name="guests" min="1" max="50" value="4" required>
+          </label>
+        </div>
+
+        <label class="form__field">
+          <span class="form__label">Формат праздника</span>
+          <select class="form__input" name="format">
+            <option value="Дома">Дома</option>
+            <option value="На даче">На даче</option>
+            <option value="В ресторане">В ресторане</option>
+            <option value="На улице">На улице</option>
+          </select>
+        </label>
+
+        <fieldset class="form__field">
+          <legend class="form__label">Кто готовит?</legend>
+          <div class="form__options">
+            <label class="form__option"><input class="form__check" type="radio" name="cook" value="Я сам(а)" checked> Я сам(а)</label>
+            <label class="form__option"><input class="form__check" type="radio" name="cook" value="Все вместе"> Все вместе</label>
+            <label class="form__option"><input class="form__check" type="radio" name="cook" value="Доставка"> Доставка</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="form__field">
+          <legend class="form__label">Закуски на столе</legend>
+          <div class="form__options">
+            <label class="form__option"><input class="form__check" type="checkbox" name="dishes" value="Оливье" checked> Оливье</label>
+            <label class="form__option"><input class="form__check" type="checkbox" name="dishes" value="Сельдь под шубой"> Сельдь под шубой</label>
+            <label class="form__option"><input class="form__check" type="checkbox" name="dishes" value="Канапе"> Канапе</label>
+            <label class="form__option"><input class="form__check" type="checkbox" name="dishes" value="Тарталетки"> Тарталетки</label>
+            <label class="form__option"><input class="form__check" type="checkbox" name="dishes" value="Мандарины" checked> Мандарины</label>
+          </div>
+        </fieldset>
+
+        <label class="form__field">
+          <span class="form__label">Пожелания</span>
+          <textarea class="form__input form__input--area" name="comment" placeholder="Например: без майонеза"></textarea>
+        </label>
+
+        <label class="form__agree">
+          <input class="form__check" type="checkbox" name="agree" required>
+          <span>Согласен(на) на обработку персональных данных</span>
+        </label>
+
+        <button class="form__button" type="submit">Отправить заявку</button>
+        <p class="form__result" id="party-result" role="status" hidden></p>
+      </form>
+      <footer class="content__footer">Лабораторная работа №4, группа 6401. Коннина Ю. Д.</footer>
+    </main>
+  </div>
+  <script src="js/party.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная – Новый год</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <ul class="garland" aria-hidden="true"><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li></ul>
+  <div class="page">
+    <aside class="sidebar">
+      <img class="sidebar__logo" src="images/logo.svg" alt="Логотип сайта: ёлка со звездой">
+      <p class="sidebar__title">Закуски и развлечения на Новый год</p>
+      <nav class="nav">
+        <a class="nav__link nav__link--current" href="index.html" aria-current="page">Главная</a>
+        <a class="nav__link" href="snacks.html">Закуски</a>
+        <a class="nav__link" href="olivier.html">Оливье</a>
+        <a class="nav__link" href="activities.html">Чем заняться</a>
+        <a class="nav__link" href="party.html">Заявка на праздник</a>
+        <a class="nav__link" href="about.html">Об авторе</a>
+      </nav>
+    </aside>
+    <main class="content">
+
+      <section class="hero">
+        <div class="hero__snow" aria-hidden="true"><span class="hero__flake"></span><span class="hero__flake"></span><span class="hero__flake"></span><span class="hero__flake"></span><span class="hero__flake"></span><span class="hero__flake"></span><span class="hero__flake"></span><span class="hero__flake"></span><span class="hero__flake"></span><span class="hero__flake"></span><span class="hero__flake"></span><span class="hero__flake"></span><span class="hero__flake"></span><span class="hero__flake"></span><span class="hero__flake"></span><span class="hero__flake"></span><span class="hero__flake"></span><span class="hero__flake"></span><span class="hero__flake"></span><span class="hero__flake"></span></div>
+        <span class="hero__star" aria-hidden="true">★</span>
+        <h1 class="hero__title">С наступающим Новым годом!</h1>
+        <p class="hero__text">Закуски для праздничного стола, рецепт оливье и идеи, чем занять новогоднюю ночь</p>
+      </section>
+
+      <figure class="figure">
+        <img class="figure__img figure__img--main" src="images/main.jpg" alt="Котик в шапке">
+        <figcaption class="figure__caption">Рисунок 1. Новогодний кот в шапке</figcaption>
+      </figure>
+
+      <h2 class="content__subtitle">Разделы сайта</h2>
+      <ul>
+        <li><a href="snacks.html">Закуски</a> – карточки блюд с временем приготовления и числом порций (вёрстка Grid)</li>
+        <li><a href="olivier.html">Оливье</a> – состав и порядок приготовления</li>
+        <li><a href="activities.html">Чем заняться</a> – идеи для вечера (вёрстка Flexbox)</li>
+        <li><a href="party.html">Заявка на праздник</a> – форма, данные из которой выводятся в консоль</li>
+        <li><a href="about.html">Об авторе</a> – данные о выполнении работы</li>
+      </ul>
+      <p class="note">Сайт из ЛР №2, переделанный на современный CSS: переменные, Flexbox, Grid, вложенность, <code>color-mix()</code> и анимации. Классы названы по БЭМ</p>
+      <footer class="content__footer">Лабораторная работа №4, группа 6401. Коннина Ю. Д.</footer>
+    </main>
+  </div>
+</body>
+</html>

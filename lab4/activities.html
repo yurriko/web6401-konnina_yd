@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Чем заняться – Новый год</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <ul class="garland" aria-hidden="true"><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li></ul>
+  <div class="page">
+    <aside class="sidebar">
+      <img class="sidebar__logo" src="images/logo.svg" alt="Логотип сайта: ёлка со звездой">
+      <p class="sidebar__title">Закуски и развлечения на Новый год</p>
+      <nav class="nav">
+        <a class="nav__link" href="index.html">Главная</a>
+        <a class="nav__link" href="snacks.html">Закуски</a>
+        <a class="nav__link" href="olivier.html">Оливье</a>
+        <a class="nav__link nav__link--current" href="activities.html" aria-current="page">Чем заняться</a>
+        <a class="nav__link" href="party.html">Заявка на праздник</a>
+        <a class="nav__link" href="about.html">Об авторе</a>
+      </nav>
+    </aside>
+    <main class="content">
+
+      <h1 class="content__title">Чем заняться на Новый год</h1>
+      <p class="content__text content__text--lead">Новогодний вечер не ограничивается столом!! Ниже идеи для дома и для улицы</p>
+      <p class="content__text">Карточки выложены через Flexbox: <code>flex-wrap: wrap</code> переносит их на новую строку, <code>flex: 1 1 240px</code> растягивает до ширины ряда, а внутри карточки колонка прижимает метку к низу</p>
+      <ul class="cards">
+        <li class="cards__item">
+          <span class="cards__icon" aria-hidden="true">🎬</span>
+          <h3 class="cards__title">Новогодний фильм</h3>
+          <p class="cards__text">Традиционный просмотр любимого фильма</p>
+          <span class="cards__tag">дома</span>
+        </li>
+        <li class="cards__item">
+          <span class="cards__icon" aria-hidden="true">🎲</span>
+          <h3 class="cards__title">Настольные игры</h3>
+          <p class="cards__text">Подходят игры на компанию от трёх человек: карточные, на ассоциации</p>
+          <span class="cards__tag">дома</span>
+        </li>
+        <li class="cards__item">
+          <span class="cards__icon" aria-hidden="true">🎄</span>
+          <h3 class="cards__title">Украшение дома</h3>
+          <p class="cards__text">Наряжают ёлку, вешают гирлянды, делают бумажные снежинки</p>
+          <span class="cards__tag">дома</span>
+        </li>
+        <li class="cards__item">
+          <span class="cards__icon" aria-hidden="true">✉️</span>
+          <h3 class="cards__title">Письмо себе</h3>
+          <p class="cards__text">Записывают итоги года и цели на следующий; письмо открывают через год</p>
+          <span class="cards__tag">дома</span>
+        </li>
+        <li class="cards__item cards__item--outdoor">
+          <span class="cards__icon" aria-hidden="true">🌃</span>
+          <h3 class="cards__title">Прогулка</h3>
+          <p class="cards__text">Прогулка по городу после полуночи</p>
+          <span class="cards__tag">на улице</span>
+        </li>
+        <li class="cards__item cards__item--outdoor">
+          <span class="cards__icon" aria-hidden="true">⛸️</span>
+          <h3 class="cards__title">Каток</h3>
+          <p class="cards__text">Праздничные катки работают в большинстве городов, но в новогодние дни билеты лучше брать заранее</p>
+          <span class="cards__tag">на улице</span>
+        </li>
+      </ul>
+      <footer class="content__footer">Лабораторная работа №4, группа 6401. Коннина Ю. Д.</footer>
+    </main>
+  </div>
+</body>
+</html>

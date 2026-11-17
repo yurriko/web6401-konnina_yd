@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" font-family="Arial, sans-serif">
+  <rect width="400" height="300" fill="#10263F"/>
+  <g fill="#FFFFFF" opacity="0.8">
+    <circle cx="40" cy="40" r="2"/><circle cx="90" cy="110" r="2"/><circle cx="340" cy="60" r="2"/>
+    <circle cx="360" cy="150" r="2"/><circle cx="60" cy="200" r="2"/><circle cx="320" cy="230" r="2"/>
+    <circle cx="150" cy="30" r="2"/><circle cx="250" cy="80" r="2"/>
+  </g>
+  <rect x="185" y="230" width="30" height="40" fill="#6B3E1F"/>
+  <polygon points="200,60 270,140 130,140" fill="#1F7A4D"/>
+  <polygon points="200,100 290,195 110,195" fill="#1A6B43"/>
+  <polygon points="200,150 310,240 90,240" fill="#145A38"/>
+  <polygon points="200,28 206,48 227,48 210,60 217,80 200,68 183,80 190,60 173,48 194,48" fill="#E8B84A"/>
+  <g>
+    <circle cx="190" cy="120" r="6" fill="#C8102E"/><circle cx="215" cy="165" r="6" fill="#E8B84A"/>
+    <circle cx="165" cy="190" r="6" fill="#4DA3FF"/><circle cx="240" cy="215" r="6" fill="#C8102E"/>
+    <circle cx="140" cy="225" r="6" fill="#E8B84A"/><circle cx="205" cy="105" r="5" fill="#E8B84A"/>
+  </g>
+</svg>

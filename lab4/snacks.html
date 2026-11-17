@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Закуски – Новый год</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <ul class="garland" aria-hidden="true"><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li><li class="garland__bulb"></li></ul>
+  <div class="page">
+    <aside class="sidebar">
+      <img class="sidebar__logo" src="images/logo.svg" alt="Логотип сайта: ёлка со звездой">
+      <p class="sidebar__title">Закуски и развлечения на Новый год</p>
+      <nav class="nav">
+        <a class="nav__link" href="index.html">Главная</a>
+        <a class="nav__link nav__link--current" href="snacks.html" aria-current="page">Закуски</a>
+        <a class="nav__link" href="olivier.html">Оливье</a>
+        <a class="nav__link" href="activities.html">Чем заняться</a>
+        <a class="nav__link" href="party.html">Заявка на праздник</a>
+        <a class="nav__link" href="about.html">Об авторе</a>
+      </nav>
+    </aside>
+    <main class="content">
+
+      <h1 class="content__title">Закуски на новогодний стол</h1>
+      <p class="content__text">Карточки разложены CSS Grid: колонки подстраиваются под ширину экрана (<code>repeat(auto-fill, minmax(220px, 1fr))</code>), а оливье как главный салат занимает две колонки. Внутри каждой карточки – своя сетка с именованными областями</p>
+      <section class="menu">
+        <article class="menu__dish menu__dish--featured">
+          <h3 class="menu__name"><a href="olivier.html">Оливье</a></h3>
+          <span class="menu__time">60 мин</span>
+          <p class="menu__base">Картофель, морковь, яйца, колбаса, огурцы, горошек</p>
+          <span class="menu__portions">Порций: 8</span>
+        </article>
+        <article class="menu__dish">
+          <h3 class="menu__name">Сельдь под шубой</h3>
+          <span class="menu__time">90 мин</span>
+          <p class="menu__base">Сельдь, свёкла, картофель, морковь, яйца, майонез</p>
+          <span class="menu__portions">Порций: 8</span>
+        </article>
+        <article class="menu__dish">
+          <h3 class="menu__name">Канапе с красной рыбой</h3>
+          <span class="menu__time">20 мин</span>
+          <p class="menu__base">Хлеб, сливочный сыр, слабосолёная рыба, огурец</p>
+          <span class="menu__portions">Порций: 12</span>
+        </article>
+        <article class="menu__dish">
+          <h3 class="menu__name">Тарталетки с икрой</h3>
+          <span class="menu__time">15 мин</span>
+          <p class="menu__base">Готовые тарталетки, сливочное масло, икра</p>
+          <span class="menu__portions">Порций: 12</span>
+        </article>
+        <article class="menu__dish">
+          <h3 class="menu__name">Сырная нарезка</h3>
+          <span class="menu__time">10 мин</span>
+          <p class="menu__base">Несколько сортов сыра, виноград, орехи</p>
+          <span class="menu__portions">Порций: 6</span>
+        </article>
+        <article class="menu__dish">
+          <h3 class="menu__name">Мандарины</h3>
+          <span class="menu__time">1 мин</span>
+          <p class="menu__base">Мандарины. Просто мандарины</p>
+          <span class="menu__portions">Порций: 10</span>
+        </article>
+      </section>
+      <p class="note">Для сельди под шубой время не включает охлаждение: салату нужно постоять в холодильнике несколько часов, поэтому его готовят заранее</p>
+
+      <h2 class="content__subtitle">Как спланировать стол</h2>
+      <ul>
+        <li>Так как сайт учебный смело заявляю – как душа ляжет. Если кто-то подрался за закуски, значит они вышли вкусными...</li>
+        <li><small>Лучше приготовить побольше</small></li>
+      </ul>
+      <footer class="content__footer">Лабораторная работа №4, группа 6401. Коннина Ю. Д.</footer>
+    </main>
+  </div>
+</body>
+</html>

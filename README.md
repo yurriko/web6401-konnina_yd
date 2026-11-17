@@ -78,3 +78,41 @@ npm test
 ```
 
 Результат: 16 тестов проходят. Форматирование соответствует `prettier` из конфигурации проекта (`npm run prettier:check`).
+
+---
+
+# Лабораторная работа №4
+
+**Тема:** современный CSS и основы ООП на JavaScript. Сайт из ЛР №2, переделанный на Flexbox, Grid, CSS-переменные и БЭМ, с формой и классом на JS
+
+**Расположение:** папка `lab4/`, точка входа – `lab4/index.html`
+
+### Ꮯᴛᴩуᴋᴛуᴩᴀ
+
+- `index.html` – главная страница с анимированной шапкой
+- `snacks.html` – карточки закусок, вёрстка **Grid**
+- `olivier.html` – рецепт оливье
+- `activities.html` – идеи для вечера, вёрстка **Flexbox**
+- `party.html` – форма заявки на праздник
+- `about.html` – данные об авторе
+- `css/style.css` – стили
+- `js/party.js` – класс `PartyRequest` и обработчик формы
+- `images/` – логотип и картинки
+
+### Ꮲᴇᴀᴧиɜᴏʙᴀнныᴇ ᴛᴩᴇбᴏʙᴀния
+
+| Требование | Где и как |
+|---|---|
+| Flexbox | `activities.html`: блок `cards` – `flex-wrap: wrap`, `flex: 1 1 240px`; каркас всех страниц `page` и форма тоже на flex |
+| Grid | `snacks.html`: блок `menu` – `repeat(auto-fill, minmax(220px, 1fr))`, карточка оливье на две колонки (`grid-column: span 2`), внутри карточек `grid-template-areas` |
+| Цвета только через переменные | палитра в `:root` (`--color-*`), полупрозрачные оттенки получены через `color-mix()` из тех же переменных; в JS цвет для консоли читается из `--color-red` |
+| Анимация | главная: снегопад (`snowfall` + `sway`), переливающийся золотой заголовок (`shimmer`), пульсирующая звезда (`star-glow`); гирлянда из ЛР №2; учтён `prefers-reduced-motion` |
+| Форма (≥ 3 типов полей) | `party.html`: `text`, `email`, `date`, `number`, `select`, `radio`, `checkbox`, `textarea`, галочка согласия и кнопка отправки |
+| Класс JS | `PartyRequest`: конструктор, геттер `formattedDate`, метод `print()` – вывод через `console.group`, `console.log`, `console.table`. При отправке формы создаётся объект и вызывается `print()` |
+| БЭМ (бонус) | блоки `garland`, `page`, `sidebar`, `nav`, `content`, `hero`, `cards`, `menu`, `table`, `form`; элементы `form__input`, модификаторы `nav__link--current`, `menu__dish--featured`, `cards__item--outdoor` и т. д. |
+
+Также используется вложенность CSS (nesting), `inset`, `clamp()`, `:user-invalid`, `accent-color`.
+
+### Ᏼᴀᴨуᴄᴋ
+
+Открыть `lab4/index.html` в браузере. Для проверки формы: `party.html` → заполнить → «Отправить заявку» → F12 → Console.
