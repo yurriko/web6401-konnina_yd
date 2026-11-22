@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Анкета гостя – Новый год</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <ul class="garland" aria-hidden="true"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+  <div class="layout">
+    <aside class="sidebar">
+      <img src="images/logo.svg" alt="Логотип сайта">
+      <p class="site-title">Закуски и развлечения на Новый год</p>
+      <nav>
+        <a href="index.html">Главная</a>
+        <a href="snacks.html">Закуски</a>
+        <a href="olivier.html">Оливье</a>
+        <a href="activities.html">Чем заняться</a>
+        <a href="form.html" id="current">Анкета гостя</a>
+        <a href="about.html">Об авторе</a>
+      </nav>
+    </aside>
+    <main class="content">
+      <h1>Анкета новогоднего гостя</h1>
+      <p class="lead">Расскажи, как ты хочешь провести праздник. Форма отправит данные на локальный сервер.</p>
+      <form class="guest-form" id="guest-form" action="/api/registration" method="post">
+        <div class="form-field"><label for="guest-name">Имя</label><input type="text" id="guest-name" name="name" minlength="2" maxlength="80" required placeholder="Например, Иван"></div>
+        <div class="form-field"><label for="guest-email">Электронная почта</label><input type="email" id="guest-email" name="email" maxlength="150" required placeholder="example@mail.ru"></div>
+        <div class="form-field"><label for="guest-count">Сколько будет гостей?</label><input type="number" id="guest-count" name="count" min="1" max="50" value="4" required></div>
+        <div class="form-field"><label for="guest-plan">Любимое развлечение</label><select id="guest-plan" name="plan" required><option value="Игры">Настольные игры</option><option value="Фильмы">Новогодние фильмы</option><option value="Прогулка">Прогулка</option></select></div>
+        <div class="form-field"><label for="guest-wishes">Пожелания</label><textarea id="guest-wishes" name="wishes" rows="4" maxlength="500" placeholder="Что добавить на праздничный стол?"></textarea></div>
+        <label class="checkbox-field"><input type="checkbox" name="consent" id="guest-consent" required> Согласен(-на) на обработку данных для демонстрации лабораторной</label>
+        <button type="submit" class="submit-button">Отправить анкету</button>
+        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+      </form>
+      <footer>Лабораторная работа №4, группа 6401. Коннина Ю. Д.</footer>
+    </main>
+  </div>
+  <script src="js/form.js" defer></script>
+</body>
+</html>
